@@ -4,6 +4,7 @@
   /* border: 1px solid red;  tolto il px che con 2 elementi flottanti occupava lo spazio necessatio per stare infloat*/
   background: pink;
 }
+/* inizio per large scren */
 .container{
   width: 992px;
   margin: 0 auto;
@@ -12,8 +13,9 @@
   width: 992px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 100px;
 }
+/* /inizio per large scren */
 .row::after{
   content: "";
   display: table;
@@ -103,6 +105,29 @@
 
 /* MEDIA QUERY colonne medium screen from 768px to 992px*/
 @media all and (min-width: 768px) and (max-width: 992px){
+  /* inizio per medium scren */
+  .container{
+    width: 768px;
+    margin: 0 auto;
+  }
+  .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+  /* /inizio per medium scren */
+  /* inizio per medium scren */
+  .container{
+    margin: 0 auto;
+  }
+  .row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  /* /inizio per medium scren */
   /* colonne medium screen */
   .col-md-1{
     width: calc((100%/12) * 1)
