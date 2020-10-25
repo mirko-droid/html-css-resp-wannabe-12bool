@@ -1,9 +1,9 @@
 /* DEBUG:  */ /*height vedere 12-bool senza contenuto con contenuto in html è da togliere*/
-.debug [class*="col-"]{
-  /* height: 200px; */
-  /* border: 1px solid red;  tolto il px che con 2 elementi flottanti occupava lo spazio necessatio per stare infloat*/
+/* .debug [class*="col-"]{
+  height: 200px;
   background: pink;
-}
+  /* border: 1px solid red;  tolto il px che con 2 elementi flottanti occupava lo spazio necessatio per stare infloat*/
+/*}*/
 /* inizio per large screen */
 .container{
   width: 992px;
@@ -15,7 +15,7 @@
   margin-right: auto;
   margin-top: 100px;
 }
-/* /inizio per large screen */
+
 .row::after{
   content: "";
   display: table;
@@ -102,10 +102,22 @@
   margin-left: calc((100%/12) * 12)
 }
 /* /OFFSETS */
+#why .row img{
+  background-color: #428bca;
+}
+img {
+  height: 200px;
+}
+
 
 /* MEDIA QUERY colonne medium screen from 768px to 992px*/
 @media all and (min-width: 768px) and (max-width: 992px){
   /* inizio per medium screen */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   body{
     font-size: 24px;
   }
@@ -116,11 +128,7 @@
     width: 100%;
     margin-top: 30px;
   }
-  /* /inizio per medium screen */
-  h3{
-    margin: 10px 0;
-    font-size: 30px;
-  }
+
   /* colonne medium screen */
   .col-md-1{
     width: calc((100%/12) * 1)
@@ -204,11 +212,36 @@
   .p_20{
     padding: 20px;
   }
+  h3{
+    margin: 20px 0;
+    font-size: 30px;
+  }
+  hr{
+    margin: 30px 0;
+  }
+  img{
+    margin-top: 25px;
+  }
+  #why .row img{
+    background-color: lightgreen;
+  }
 }
 /* / MEDIA QUERY colonne medium screen from 768px to 992px*/
 
-/* MEDIA QUERY colonne small screen from 0 to 768px*/
-@media all and (max-width: 768px){
+/* MEDIA QUERY colonne small screen from 0 to 767px*/
+ @media all and (max-width: 767px){
+  /* inizio per small screen */
+  body{
+    font-size: 35px;
+  }
+  .container{
+    width: 95%;
+  }
+  .row {
+    width: 100%;
+    margin-top: 10px;
+  }
+  /* /inizio per small screen */
   /* colonne small screen from 0 to 768px*/
   .col-xs-1{
     width: calc((100%/12) * 1)
@@ -284,5 +317,27 @@
   .col-off-xs-12{
     margin-left: calc((100%/12) * 12)
   }
+  .m_t{
+    margin-top: 20px;
+  }
+  h3{
+    margin: 40px 0;
+    font-size: 50px;
+  }
+  hr{
+    margin: 50px 0;
+  }
+  img{
+    height: 200px;
+  }
+  #lezioni .row img,
+  #steps .row img{
+    margin-top: 40px;
+  }
+  #why .row img{
+    height: 100px;
+    background-color: orange;
+  }
+
 }
-/* /MEDIA QUERY colonne small screen from 0 to 768px*/
+/* /MEDIA QUERY colonne small screen from 0 to 767px*/
