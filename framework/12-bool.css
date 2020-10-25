@@ -1,7 +1,7 @@
 /* DEBUG:  */ /*height vedere 12-bool senza contenuto con contenuto in html è da togliere*/
 .debug [class*="col-"]{
   /* height: 200px; */
-  border: 1px solid red;
+  /* border: 1px solid red;  tolto il px che con 2 elementi flottanti occupava lo spazio necessatio per stare infloat*/
   background: pink;
 }
 .container{
